@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabSintaxis2", "LabSintaxis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabSintaxis3", "LabSintaxis3\LabSintaxis3.csproj", "{BF8C829C-841B-456A-B26B-4BD84CA4D817}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerciciosParaPensar", "EjerciciosParaPensar\EjerciciosParaPensar.csproj", "{9EF28145-79C4-4110-9D84-74E3396A7254}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BF8C829C-841B-456A-B26B-4BD84CA4D817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF8C829C-841B-456A-B26B-4BD84CA4D817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8C829C-841B-456A-B26B-4BD84CA4D817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF28145-79C4-4110-9D84-74E3396A7254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF28145-79C4-4110-9D84-74E3396A7254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF28145-79C4-4110-9D84-74E3396A7254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF28145-79C4-4110-9D84-74E3396A7254}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
