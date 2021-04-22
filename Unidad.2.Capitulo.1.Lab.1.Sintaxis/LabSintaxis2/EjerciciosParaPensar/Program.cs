@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace EjerciciosParaPensar
 {
@@ -20,6 +21,8 @@ namespace EjerciciosParaPensar
 
             int resultado = num1 + num2;
             Console.WriteLine($"El resultado de la suma entre {num1} y {num2} es: {resultado}");
+            System.Threading.Thread.Sleep(1000);
+
 
             // 2) Año bisiesto.
             Console.Clear();
@@ -74,10 +77,94 @@ namespace EjerciciosParaPensar
             for (int contador = 0; contador < 12; contador++)
             {
                 suma = x + y;
-                Console.WriteLine(suma.ToString()) ;
+                Console.WriteLine(suma.ToString());
                 y = x;
                 x = suma;
             }
+
+            //4) Numeros Pares del 1 al 100 
+            Console.Clear();
+            x = 0;
+            for (int c = 0; x < 100; c++)
+            {
+                x = x + 2;
+                Console.WriteLine(x.ToString());
+            }
+
+            Thread.Sleep(1000);
+
+            // 5) Funcion que devuelve el numero del mes
+
+            Console.Clear();
+
+            int NumeroMes(string mes)
+            {
+
+                string[] paises = { "Enero", "Febrero", "Marzo", "Abril", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Nomviembre", "Diciembre" };
+
+                for (int i = 0; i <= 12; i++)
+                {
+                    if (mes == paises[i])
+                    {
+                        return (i + 1);
+                    }
+                }
+                return 0;
+
+
+            }
+
+            int numero = NumeroMes("Abril");
+
+            if (numero == 0)
+            {
+                Console.WriteLine("No se encontro el mes solicitado");
+            }
+            else
+            {
+
+                Console.WriteLine(numero.ToString()); ;
+            }
+
+
+            // 6) Dado un número entero, que se convierta a número romano.
+
+            Console.Clear();
+            static string ToRoman(int number)
+            {
+                if ((number < 0) || (number > 3999)) throw new ArgumentOutOfRangeException("INGRESA UN VALOR ENTRE 1 Y 3999");
+                if (number < 1) return string.Empty;
+                if (number >= 1000) return "M" + ToRoman(number - 1000);
+                if (number >= 900) return "CM" + ToRoman(number - 900);
+                if (number >= 500) return "D" + ToRoman(number - 500);
+                if (number >= 400) return "CD" + ToRoman(number - 400);
+                if (number >= 100) return "c" + ToRoman(number - 100);
+                if (number >= 90) return "XC" + ToRoman(number - 90); if (number >= 50) return "L" + ToRoman(number - 50);
+                if (number >= 40) return "XL" + ToRoman(number - 40); if (number >= 10) return "X" + ToRoman(number - 10);
+                if (number >= 9) return "IX" + ToRoman(number - 9); if (number >= 5) return "V" + ToRoman(number - 5);
+                if (number >= 4) return "IV" + ToRoman(number - 4); if (number >= 1) return "I" + ToRoman(number - 1);
+                throw new ArgumentOutOfRangeException("F"); 
+            };
+
+            Console.WriteLine("Ingrese un numero: ");
+            numero = Convert.ToInt32((Console.ReadLine()));
+            Console.WriteLine(ToRoman(numero));
+            Thread.Sleep(10000);
+
+
+
+            // 7) Calcular los N primeros números primos gemelos.
+
+            Console.Clear();
+            Console.WriteLine("Ingrese la cantidad de numeros primos gemelos que desee: ");
+            numero = Convert.ToInt32((Console.ReadLine()));
+
+            for (int c = 0; c <= numero; c++)
+            { 
+            
+            }
+
+
 
         }
     }
