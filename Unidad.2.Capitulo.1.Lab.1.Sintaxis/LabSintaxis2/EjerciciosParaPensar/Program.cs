@@ -159,9 +159,32 @@ namespace EjerciciosParaPensar
             Console.WriteLine("Ingrese la cantidad de numeros primos gemelos que desee: ");
             numero = Convert.ToInt32((Console.ReadLine()));
 
-            for (int c = 0; c <= numero; c++)
-            { 
-            
+            int gemelo = 0;
+            int n = 2;
+            int total = 1;
+            while (total <= numero)
+            {
+                bool esPrimo = true;
+
+                for (int i = 2; i < n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        esPrimo = false;
+                        break;
+                    }
+
+                }
+
+                if (esPrimo)
+                {
+                    gemelo = n;
+                    if (n == (gemelo - 2))
+                        { Console.WriteLine(n); }
+                    total++;
+                }
+                
+                n++;
             }
 
 
