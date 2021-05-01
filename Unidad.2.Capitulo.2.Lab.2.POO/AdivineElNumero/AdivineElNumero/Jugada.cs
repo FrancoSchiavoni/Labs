@@ -13,17 +13,22 @@ namespace AdivineElNumero
         {
             Random rnd = new Random();
             _numero = rnd.Next(maxNumero);
+            this.Maximo = maxNumero;
         }
 
+        ~Jugada() { }
+
         //Atributos
+        int _maximo;
         int _numero;
         int _intentos = 0;
-        bool _adivino; 
+        bool _adivino = false; 
 
         //Propiedades
         public int Intentos { get => _intentos; set => _intentos = value; }
         public bool Adivino { get => _adivino; set => _adivino = value; }
         public int Numero { get => _numero; set => _numero = value; }
+        public int Maximo { get => _maximo; set => _maximo = value; }
 
 
         //Metodos
@@ -32,13 +37,13 @@ namespace AdivineElNumero
             if (numero != Numero)
             {
                 Intentos += 1;
-                Console.WriteLine("No le pegaste negrito");
+                Console.WriteLine("No le pegaste ");
                 Console.ReadKey();
                 Adivino = false;
             }
             else 
             {
-                Console.WriteLine("Ganaste negrito");
+                Console.WriteLine("Ganaste ");
                 Adivino = true;
             }
                 
