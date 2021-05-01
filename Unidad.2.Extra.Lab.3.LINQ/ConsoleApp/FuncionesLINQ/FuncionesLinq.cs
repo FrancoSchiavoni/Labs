@@ -8,10 +8,7 @@ namespace FuncionesLINQ
     {
         public IEnumerable<string> ObtenerProvinciasQueEmpiezanConDeterminadasLetras(IEnumerable<string> provincias)
         {
-            var prov = from p in provincias
-                              where p == “Santa Fe"
-                              select p;
-
+        
             throw new NotImplementedException();
         }
 
