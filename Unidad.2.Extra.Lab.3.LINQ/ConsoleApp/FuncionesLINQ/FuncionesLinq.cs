@@ -8,8 +8,14 @@ namespace FuncionesLINQ
     {
         public IEnumerable<string> ObtenerProvinciasQueEmpiezanConDeterminadasLetras(IEnumerable<string> provincias)
         {
-        
-            throw new NotImplementedException();
+
+            IEnumerable<string> numQuery =
+            from p in provincias
+            where p.Substring(0, 1) == "S" | p.Substring(0, 1) == "T"
+            select p;
+
+            return numQuery; 
+
         }
 
         public IEnumerable<int> ObtenerNumerosMayoresA20(IEnumerable<int> numeros)

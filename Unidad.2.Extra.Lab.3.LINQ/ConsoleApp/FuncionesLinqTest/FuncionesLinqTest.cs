@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace FuncionesLinqTest
+namespace FuncionesLinqTests
 {
     public class FuncionesLinqTest
     {
@@ -42,6 +42,12 @@ namespace FuncionesLinqTest
 
             // Act
             IEnumerable<string> provinciasSeleccionadas = funcionesLinq.ObtenerProvinciasQueEmpiezanConDeterminadasLetras(provincias);
+
+            foreach (string p in provinciasSeleccionadas)
+            {
+                Console.WriteLine(p);
+            }
+
 
             // Assert
             Assert.Equal(expected: new List<String>

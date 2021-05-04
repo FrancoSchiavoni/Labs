@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FuncionesLinqTest\FuncionesLinqTest.csproj" />
+    <ProjectReference Include="..\FuncionesLinqTest\FuncionesLinqTests.csproj" />
     <ProjectReference Include="..\FuncionesLINQ\FuncionesLINQ.csproj" />
   </ItemGroup>
 

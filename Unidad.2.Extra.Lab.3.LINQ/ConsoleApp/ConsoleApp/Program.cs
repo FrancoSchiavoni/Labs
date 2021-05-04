@@ -1,4 +1,5 @@
 ﻿using System;
+using FuncionesLinqTests;
 
 namespace ConsoleApp
 {
@@ -6,7 +7,13 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-          
+            var f = new FuncionesLinqTest();
+            f.ObtenerProvinciasQueEmpiezanConDetermindasLetrasTest();
+            
+            
+            
+
+
         }
     }
 }
