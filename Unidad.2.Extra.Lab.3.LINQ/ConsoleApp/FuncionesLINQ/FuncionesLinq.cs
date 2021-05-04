@@ -20,17 +20,43 @@ namespace FuncionesLINQ
 
         public IEnumerable<int> ObtenerNumerosMayoresA20(IEnumerable<int> numeros)
         {
-            throw new NotImplementedException();
+            IEnumerable<int> numQuery =
+            from n in numeros
+            where n > 20
+            select n;
+
+            return numQuery;
         }
 
         public IEnumerable<int> ObtenerCodigoPostalDeCiudadesQueTenganEnSuNombreTresCarateresDeterminados(IEnumerable<Ciudad> ciudades, string ciudad)
         {
-            throw new NotImplementedException();
+            IEnumerable<int> numQuery =
+             from c in ciudades
+             where c.Nombre.ToLower().StartsWith(ciudad.ToLower()) == true 
+             select c.CodigoPostal;
+
+            return numQuery;
+
         }
 
-        public IEnumerable<Empleado> AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldo(IEnumerable<Empleado> empleados, IEnumerable<Empleado> empleadosParaAgregar, string order)
+        public IEnumerable<Empleado> AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldo(IList<Empleado> empleados, IEnumerable<Empleado> empleadosParaAgregar, string order)
         {
-            throw new NotImplementedException();
+
+            foreach ( Empleado e in empleadosParaAgregar)
+            {
+                
+                empleados.Add(e) ;
+                Console.WriteLine($"Agrego a  {e.Nombre}" );
+            }
+
+            IEnumerable<Empleado> numQuery;
+
+            if (order == "ASC")
+                { numQuery = empleados.OrderBy(empleado => empleado.Sueldo); }
+            else
+                { numQuery = empleados.OrderByDescending(empleado => empleado.Sueldo); } 
+            
+            return numQuery;
         }
     }
 }
