@@ -52,9 +52,14 @@ namespace FuncionesLINQ
             IEnumerable<Empleado> numQuery;
 
             if (order == "ASC")
-                { numQuery = empleados.OrderBy(empleado => empleado.Sueldo); }
+            { numQuery = numQuery = from e in empleados orderby e.Sueldo select e; }
             else
-                { numQuery = empleados.OrderByDescending(empleado => empleado.Sueldo); } 
+            { numQuery = numQuery = from e in empleados orderby e.Sueldo descending select e; }
+
+            //if (order == "ASC")
+            //    { numQuery = empleados.OrderBy(empleado => empleado.Sueldo); }
+            //else
+            //    { numQuery = empleados.OrderByDescending(empleado => empleado.Sueldo); } 
             
             return numQuery;
         }
