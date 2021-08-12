@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace FuncionesLinqTest
+namespace FuncionesLinqTests
 {
     public class FuncionesLinqTest
     {
@@ -43,6 +43,12 @@ namespace FuncionesLinqTest
             // Act
             IEnumerable<string> provinciasSeleccionadas = funcionesLinq.ObtenerProvinciasQueEmpiezanConDeterminadasLetras(provincias);
 
+            foreach (string p in provinciasSeleccionadas)
+            {
+                Console.WriteLine(p);
+            }
+
+
             // Assert
             Assert.Equal(expected: new List<String>
             {
@@ -66,6 +72,11 @@ namespace FuncionesLinqTest
 
             // Act
             IEnumerable<int> numerosMayoresA20 = funcionesLinq.ObtenerNumerosMayoresA20(numeros);
+
+            foreach (int n in numerosMayoresA20)
+            {
+                Console.WriteLine(n);
+            }
 
             // Assert
             Assert.Equal(expected: new List<int> { 21, 32, 25 }, actual: numerosMayoresA20);
@@ -100,6 +111,12 @@ namespace FuncionesLinqTest
             // Act
             IEnumerable<int> codPostalesDeCiudadesSeleccionadas = funcionesLinq.ObtenerCodigoPostalDeCiudadesQueTenganEnSuNombreTresCarateresDeterminados(ciudades, "san");
 
+            foreach (int c in codPostalesDeCiudadesSeleccionadas)
+            {
+                Console.WriteLine(c);
+            }
+
+
             // Assert
             Assert.Equal(expected: new List<int> { 3000, 4000 }, actual: codPostalesDeCiudadesSeleccionadas);
         }
@@ -115,6 +132,13 @@ namespace FuncionesLinqTest
 
             // Act
             IEnumerable<Empleado> empleadosOrdenadosPorSueldo = funcionesLinq.AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldo(empleados, empleadosParaAgregar, "ASC");
+
+            foreach (Empleado e in empleadosOrdenadosPorSueldo)
+            {
+                Console.WriteLine($"El nombre del emplado es {e.Nombre} y su sueldo es {e.Sueldo}" );
+            }
+
+            Console.ReadKey();
 
             // Assert
             Assert.Equal(expected: new List<Empleado> { empleados[1], empleadosParaAgregar[0], empleados[0], empleadosParaAgregar[1] }, actual: empleadosOrdenadosPorSueldo);

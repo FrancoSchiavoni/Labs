@@ -1,4 +1,5 @@
 ﻿using System;
+using FuncionesLinqTests;
 
 namespace ConsoleApp
 {
@@ -6,7 +7,28 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Ejecutar metodos de la libreria de clases y asi loggear los resultados en consola
+            var f = new FuncionesLinqTest();
+            
+            f.ObtenerProvinciasQueEmpiezanConDetermindasLetrasTest();
+            Console.WriteLine("Presione culquier tecla");
+            Console.ReadKey();
+            Console.Clear();
+            
+            f.ObtenerNumerosMayoresA20Test();
+            Console.WriteLine("Presione culquier tecla");
+            Console.ReadKey();
+            Console.Clear();
+            
+            f.ObtenerCodigoPostalDeCiudadesQueTenganEnSuNombreTresCarateresDeterminadosTest();
+            Console.WriteLine("Presione culquier tecla");
+            Console.ReadKey();
+            Console.Clear();
+
+            f.AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldoTest();
+            Console.WriteLine("Presione culquier tecla");
+            Console.ReadKey();
+
+
         }
     }
 }
